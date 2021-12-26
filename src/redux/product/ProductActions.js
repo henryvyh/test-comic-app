@@ -9,7 +9,7 @@ export const getProducts = async (dispatch, page, query) => {
 		params: {
 			offset: page === 1 ? null : (page - 1) * 64,
 			limit: 64,
-			titleStartsWith: query,
+			titleStartsWith: query?.trim(),
 		},
 	})
 		.then(async (data) => {
