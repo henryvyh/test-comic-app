@@ -1,0 +1,94 @@
+@import ./colors.sass
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    &::selection
+        background: #e76113
+        color: #FFFFFF
+body
+    background: $primaryColor
+button
+    outline: none
+    background: none
+    border: none
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    border-radius: 8px
+button
+    cursor: pointer
+    background: $primaryColor
+    padding: .6em 1em
+    font-size: 12px
+    text-transform: uppercase
+    border-radius: 8px
+    &:hover
+        background: $shadowColor
+    &:active
+        background: $primaryColor
+#root
+    display: flex
+    height: 100vh
+    width: 100vw
+    flex-direction: column
+    overflow: hidden
+    background: $primaryColor
+
+@media screen and ( min-width:768px)
+    .scroll-material
+        &::-webkit-scrollbar
+            width: 10px
+            height: 10px
+            border-radius: 4px
+            background: $primaryColor
+        &::-webkit-scrollbar:horizontal
+            width: auto
+            border-radius: 4px
+        &::-webkit-scrollbar-button:single-button
+            background: $primaryColor
+            height: 10px
+            width: 10px
+            position: relative
+            border-style: solid
+            &:single-button:horizontal
+                background: $primaryColor
+                border-radius: 4px
+                &:start
+                    border-radius: 4px 0 0 4px
+                &:end
+                    border-radius: 0 4px 4px 0
+            &:single-button:vertical:decrement
+                border-width: 0 6px 8px 6px
+                border-color: transparent transparent $cardColor transparent
+            &:single-button:horizontal:decrement
+                border-width: 6px 8px 6px 0px
+                border-color: transparent $cardColor transparent transparent
+            &:single-button:vertical:increment
+                border-width: 8px 6px 0px 6px
+                border-color: $cardColor transparent transparent transparent
+            &:single-button:horizontal:increment
+                border-width: 6px 0px 6px 8px
+                border-color: transparent transparent transparent $cardColor
+            &:start
+                border-radius: 4px 4px 0 0
+            &:end
+                border-radius: 0 0 4px 4px
+
+        &::-webkit-scrollbar-thumb
+            background: $scrollColor
+            border-radius: 8px
+            &:hover
+                background: #79797a
+            &:active
+                background: #79797a
+        &::-webkit-scrollbar-track
+            margin: .4em 0
+
+.MuiTooltip-popper,
+.MuiPopover-root,
+.MuiDialog-root
+    z-index: 2500 !important

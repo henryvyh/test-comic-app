@@ -1,0 +1,152 @@
+@import '../../../assets/sass/colors.sass'
+.custom-confirm
+    &-box
+        position: fixed
+        left: 0
+        top: 0
+        z-index: 8000
+        width: 100%
+        height: 100%
+        background: rgba(0, 0,0 ,0.5 )
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        *
+            color: #fff
+    &-wrap
+        min-width: 320px
+        min-height: 80px
+        position: relative
+        max-height: 60vh
+        max-width: 480px
+        background: $secondaryColor
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: column
+        border-radius: 16px
+        box-shadow: 0 4px 6px $shadowColor
+    &-header,
+    &-body,
+    &-bottom
+        width: 100%
+    &-header
+        user-select: none
+        display: flex
+        flex-direction: row
+        padding: .6em
+        &-body
+            flex-grow: 1
+            padding: 0 .6em 0 0
+            display: flex
+            align-items: center
+            justify-content: space-between
+            h1
+                flex-grow: 1
+                padding: 0 0 0 .6em
+                font-size: 22px
+            span
+                font-size: 20px
+        button
+            height: 32px
+            width: 32px
+            border-radius: 100%
+            // background: none
+            &:active
+                background: $primaryColor
+            span
+                font-size: 20px
+    &-body
+        position: relative
+        height: 100%
+        padding: .6em
+        display: flex
+        flex-direction: column
+        overflow: hidden
+        &-view
+            height: 100%
+            width: 100%
+            overflow: auto
+            p
+                font-size: 14px
+
+    &-bottom
+        user-select: none
+        display: flex
+        padding: .6em
+        align-items: center
+        justify-content: flex-end
+        flex-direction: row
+        button
+            height: 32px
+            background: none
+            border-radius: 8px
+            &:active
+                background: $primaryColor
+            &:hover
+                background: $primaryColor
+            span
+                font-size: 20px
+        .custom-confirm-bottom-accept
+            margin: 0 0 0 .8em
+            background: $accentColor
+            &:hover
+                background: $accentSecondaryColor
+            span,p
+                color: $primaryTextColorInverted
+        .custom-confirm-bottom-neutral
+            margin: 0 0 0 .8em
+            background: $primaryColor
+
+    &-up
+        position: absolute
+        bottom: 1em
+        right: 2em
+        padding: .6em
+        transition: all .15s ease-in-out
+        span
+            font-size: 20px
+        &-hide
+            visibility: hidden
+            opacity: 0
+            bottom: -2em
+    &-loading
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border-radius: 16px
+        padding: 1em
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        background: $loadingBg
+        &-wrap
+            background: $primaryColor
+            padding: 2em
+            border-radius: 8px
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+        &-icon
+            font-size: 100px
+            color: $accentColor
+        &-text
+            color: $accentColor
+            font-size: 20px
+    &-close
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background: none
+
+@media screen and ( max-width:768px)
+    .custom-confirm
+        &-wrap
+            max-width: 80%

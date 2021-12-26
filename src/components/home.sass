@@ -1,0 +1,21 @@
+.home
+    &__wrap
+        width: 100%
+        padding: 1em
+        align-self: flex-start
+        justify-content: center !important
+        display: grid !important
+        grid-template-columns: repeat(auto-fill , minmax(320px , 1fr))
+        grid-gap: 5px
+        flex-grow: 1 !important
+        overflow-y: auto !important
+        align-items: flex-start
+        &--loading
+            grid-row-gap: 56px
+        &--empty
+            flex-grow: 1
+
+@media screen and ( max-width:768px)
+    .home
+        &__wrap
+            grid-template-columns: repeat(auto-fill , minmax(290px , 1fr))
