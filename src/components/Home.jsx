@@ -34,7 +34,7 @@ const Home = () => {
 	};
 	const callbackgetProduct = async () => {
 		setLoading(true);
-		// await getProducts(dispatch, pageView, query);
+		await getProducts(dispatch, pageView, query);
 		setLoading(false);
 	};
 	const onManageCart = async (e) => {
@@ -60,7 +60,9 @@ const Home = () => {
 	const searchAPIDebounced = AwesomeDebouncePromise(searchData, 1000);
 	const onInputChange = async (e) => {
 		let val = e.target.value;
-
+		if (!val?.trim()) {
+			return;
+		}
 		await searchAPIDebounced(val);
 		setLoading(false);
 	};
