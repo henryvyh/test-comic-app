@@ -29,8 +29,8 @@ const ProductDetail = ({ data, isAdded, open, setOpen, onClick }) => {
 		if (open) callbackgetDetail();
 	}, [data]);
 	const callbackgetDetail = async () => {
-		let newData = await getDetailProduct(data?.id);
-		setViewData(newData);
+		// let newData = await getDetailProduct(data?.id);
+		// setViewData(newData);
 		setLoading(false);
 	};
 	return (

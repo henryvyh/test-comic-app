@@ -34,7 +34,7 @@ const Home = () => {
 	};
 	const callbackgetProduct = async () => {
 		setLoading(true);
-		await getProducts(dispatch, pageView, query);
+		// await getProducts(dispatch, pageView, query);
 		setLoading(false);
 	};
 	const onManageCart = async (e) => {
