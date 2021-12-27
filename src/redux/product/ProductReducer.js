@@ -4,9 +4,9 @@ const initialState = {
 	products: [],
 	paginate: {
 		offset: 0,
-		limit: 16,
+		limit: 64,
 		total: 0,
-		count: 16,
+		count: 64,
 	},
 };
 export default function productsReducer(state = initialState, action) {

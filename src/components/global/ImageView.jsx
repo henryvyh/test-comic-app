@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CardMedia, CircularProgress, Stack } from "@mui/material";
 
-const ImageView = ({ src, height, onClick }) => {
+const ImageView = ({ src, alt, height, onClick }) => {
 	const [load, setLoad] = useState(false);
 	return (
 		<Stack
@@ -20,7 +20,7 @@ const ImageView = ({ src, height, onClick }) => {
 				height={height ?? "194"}
 				image={src}
 				sx={{ cursor: onClick ? "pointer" : "default" }}
-				alt="Paella dish"
+				alt={alt}
 				onLoad={() => setLoad(true)}
 			/>
 		</Stack>

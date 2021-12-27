@@ -49,7 +49,7 @@ const ProductDetail = ({ data, isAdded, open, setOpen, onClick }) => {
 					</Stack>
 				) : (
 					<>
-						<ImageView height={320} src={_img} />
+						<ImageView height={300} src={_img} alt={title} />
 						<CardHeader
 							title={title}
 							subheader={`Modificado ${moment(modified).format("LLLL a")}`}

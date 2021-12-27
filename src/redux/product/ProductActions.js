@@ -7,8 +7,8 @@ export const getProducts = async (dispatch, page, query) => {
 		url: "comics",
 		method: "get",
 		params: {
-			offset: page === 1 ? null : (page - 1) * 16,
-			limit: 16,
+			offset: page === 1 ? null : (page - 1) * 64,
+			limit: 64,
 			titleStartsWith: query?.trim(),
 		},
 	})

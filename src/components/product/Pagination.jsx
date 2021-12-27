@@ -13,6 +13,7 @@ const PaginationView = ({ paginate, page, handleChange }) => {
 				onChange={handleChange}
 				showFirstButton
 				showLastButton
+				className="pagination--center"
 			/>
 		</Stack>
 	);

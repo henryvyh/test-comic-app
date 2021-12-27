@@ -3,7 +3,7 @@ import { AppBar, Box, Toolbar, Typography, Container } from "@mui/material";
 import CartIcon from "../../cart/CartIcon";
 import SearchView from "./SearchView";
 
-const Header = ({ onDetail, onInputChange }) => {
+const Header = ({ onDetail, onInputChange, loading }) => {
 	return (
 		<AppBar position="sticky">
 			<Container maxWidth="xl">
@@ -26,7 +26,7 @@ const Header = ({ onDetail, onInputChange }) => {
 							T C
 						</Typography>
 					</Box>
-					<SearchView onInputChange={onInputChange} />
+					<SearchView onInputChange={onInputChange} loading={loading} />
 					<CartIcon onDetail={onDetail} />
 				</Toolbar>
 			</Container>

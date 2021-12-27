@@ -30,14 +30,12 @@ const Product = ({ data, onDetail, onManageCart, isAdded }) => {
 				margin: "0 auto",
 			}}
 		>
-			<ImageView src={_img} onClick={() => onDetail(data)} />
+			<ImageView src={_img} onClick={() => onDetail(data)} alt={title} />
 			<CardHeader
 				title={title}
 				sx={{ height: "84px", overflow: "hidden", alignItems: "initial" }}
 			/>
-			<CardContent
-				sx={{ padding: "0 1em", height: "84px", overflow: "hidden" }}
-			>
+			<CardContent className="card-content">
 				<Typography variant="body2" color="text.secondary">
 					{description}
 				</Typography>

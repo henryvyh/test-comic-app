@@ -68,7 +68,11 @@ const Home = () => {
 	};
 	return (
 		<>
-			<Header onDetail={onDetail} onInputChange={onInputChange} />
+			<Header
+				onDetail={onDetail}
+				onInputChange={onInputChange}
+				loading={loading}
+			/>
 			<Stack
 				className={`${
 					products?.length || loading ? "home__wrap" : "home__wrap--empty"
